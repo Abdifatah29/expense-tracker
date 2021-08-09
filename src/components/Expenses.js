@@ -1,9 +1,9 @@
-import React from "react";
 import ExpenseItem from "./ExpenseItem";
+import Card from "./Card";
 
 function Expenses(props) {
-  return(
-    <div className="expenses">
+  return (
+    <Card className="expenses">
       {Object.keys(props.expenses).map((items, key) => {
         return (
           <ExpenseItem
@@ -14,7 +14,7 @@ function Expenses(props) {
           />
         );
       })}
-    </div>
+    </Card>
   );
 }
 

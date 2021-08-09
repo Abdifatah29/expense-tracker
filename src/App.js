@@ -7,10 +7,13 @@ function App() {
     { title: "Toilet Paper", date: new Date(2021, 6, 17), amount: 294.67 },
     { title: "Football Ticket", date: new Date(2021, 4, 11), amount: 450 },
   ];
-
+    const addExpenseHandle = expense => {
+        console.log('in app.js');
+        console.log(expense)
+}
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandle} />
       <Expenses expenses={expenses} />
     </div>
   );
